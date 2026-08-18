@@ -59,6 +59,19 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
+      
+      {/* MVP Demo Data Disclosure Footer */}
+      <footer className="w-full border-t border-border/40 bg-muted/20 py-8 px-4 mt-auto z-10 relative">
+        <div className="max-w-5xl mx-auto flex flex-col items-center justify-center text-center space-y-3">
+          <div className="flex items-center text-muted-foreground gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-80"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            <span className="font-medium text-sm tracking-wide uppercase opacity-90">PeakSkills MVP Demo</span>
+          </div>
+          <p className="text-xs md:text-sm text-muted-foreground/80 max-w-2xl leading-relaxed">
+            This MVP currently demonstrates the platform using a synthetic Uzbekistan-market dataset of <span className="font-medium text-foreground/70">70 candidates</span>, <span className="font-medium text-foreground/70">18 employers</span>, and <span className="font-medium text-foreground/70">40 vacancies</span>. Data is for demonstration and product validation purposes only.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
