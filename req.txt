@@ -1,6 +1,6 @@
 PEAKSKILLS
  MVP PRODUCT, ARCHITECTURE & DESIGN SPECIFICATION
- Antigravity Build Document — Agreed MVP Scope
+ PeakSkills Builds Document — Agreed MVP Scope
 Product positioning: AI-powered Talent & Opportunity Intelligence Platform
 MVP focus: AI Talent Matching Engine for a mixed talent pool of students and professionals/job seekers.
  Core promise: Employer enters hiring requirements → PeakSkills analyzes eligible talent → returns
