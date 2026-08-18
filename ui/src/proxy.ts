@@ -1,7 +1,7 @@
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
-export async function middleware(request: NextRequest) {
+export async function proxy(request: NextRequest) {
   let supabaseResponse = NextResponse.next({
     request,
   })
@@ -28,7 +28,7 @@ export async function middleware(request: NextRequest) {
   )
 
   // IMPORTANT: always call getUser() so the session cookie is refreshed on
-  // every request. Never skip this call inside middleware.
+  // every request. Never skip this call inside proxy.
   const {
     data: { user },
   } = await supabase.auth.getUser()

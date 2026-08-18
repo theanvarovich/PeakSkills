@@ -70,9 +70,6 @@ export class GeminiProvider implements ILLMProvider, IEmbeddingProvider {
               const parsed = CandidateAnalysisSchema.parse(JSON.parse(raw));
               return parsed;
           } catch (parseError: any) {
-              const fs = require('fs');
-              fs.writeFileSync('C:\\Users\\IMPART\\Desktop\\PeakSkills\\ui\\browser-zod.json', JSON.stringify({ raw, errors: parseError.errors || parseError.toString() }, null, 2));
-              
               console.error("ZOD_CANDIDATE_PARSE_ERROR:");
               if (parseError.errors) {
                   parseError.errors.forEach((err: any) => {
@@ -87,9 +84,6 @@ export class GeminiProvider implements ILLMProvider, IEmbeddingProvider {
       }
       return null;
     } catch (e: any) {
-      const fs = require('fs');
-      fs.writeFileSync('C:\\Users\\IMPART\\Desktop\\PeakSkills\\ui\\browser-ai.json', JSON.stringify({ message: e.message, stack: e.stack }, null, 2));
-      
       if (e instanceof Error) {
         console.error("AI_CANDIDATE_ANALYSIS_FAILED: ", e.message);
       }
